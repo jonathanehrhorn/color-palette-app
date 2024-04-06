@@ -24,24 +24,24 @@ for (const span of spans) {
   });
 }
 
-function updateColor (red, green, blue) {
+function updateSpanColor (red, green, blue) {
   selectedSpan = `rgb(${red}, ${green}, ${blue})`;
 }
 
 inputRed.addEventListener('change', (e) => {
   red = e.target.value;
   redText.textContent = red;
-  updateColor(red, green, blue);
+  updateSpanColor(red, green, blue);
 });
 
 inputGreen.addEventListener('change', (e) => {
   green = e.target.value;
   greenText.textContent = green;
-  updateColor(red, green, blue);
+  updateSpanColor(red, green, blue);
 });
 
 inputBlue.addEventListener('change', (e) => {
   blue = e.target.value;
   blueText.textContent = blue;
-  updateColor(red, green, blue);
+  updateSpanColor(red, green, blue);
 });
