@@ -5,6 +5,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" href="image/pincel-palette-icon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap" rel="stylesheet">
   <link href="styles.css" rel="stylesheet">
   <title>Color Palette</title>
@@ -38,6 +39,10 @@
         <input id="blue" type="range" min="0" max="255" value="255" step="1">
         <p id="blue-text"></p>
       </div>
+    </div>
+    <div class="toggle-container">
+      <label for="toggle" id="label-toggle"><i class="bi bi-moon-stars-fill"></i></label>
+      <input type="checkbox" id="toggle">
     </div>
   </div>
   <script src="script.js" defer></script>

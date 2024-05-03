@@ -14,6 +14,9 @@ let blue = inputBlue.value;
 
 let selectedSpan = ``;
 
+let toggle = document.getElementById('toggle');
+let labelToggle = document.getElementById('label-toggle');
+
 redText.textContent = inputRed.value;
 greenText.textContent = inputGreen.value;
 blueText.textContent = inputBlue.value;
@@ -44,4 +47,14 @@ inputBlue.addEventListener('change', (e) => {
   blue = e.target.value;
   blueText.textContent = blue;
   updateSpanColor(red, green, blue);
+});
+
+toggle.addEventListener('change', (e) => {
+  let checked = e.target.checked;
+  document.body.classList.toggle('dark');
+  if (checked == true) {
+    labelToggle.innerHTML = '<i class="bi bi-sun-fill"></i>';
+  } else {
+    labelToggle.innerHTML = '<i class="bi bi-moon-stars-fill">';    
+  }
 });

@@ -11,6 +11,7 @@ body {
   font-family: 'Red Hat Display', sans-serif;
   text-transform: uppercase;
   background-color: rgb(235, 235, 235);
+  transition: all 1.5s ease;
 }
 
 .general-container {
@@ -19,7 +20,7 @@ body {
   justify-content: center;
   align-items: center;
   width: 280px;
-  height: 580px;
+  height: 600px;
   background-color: rgb(255, 255, 255);
   border: 2px solid rgb(0, 0, 0);
   border-radius: 5px;
@@ -62,4 +63,24 @@ body {
   width: 200px;
   margin: 6px 0 6px 0;
   font-weight: bold;
+}
+
+.toggle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.3em;
+  margin: 0px 30px 12px 30px;
+}
+
+#toggle {
+  display: none;
+}
+
+#label-toggle {  
+  cursor: pointer;
+}
+
+.dark {
+  background-color: rgb(35, 35, 35);
 }
