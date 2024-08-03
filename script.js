@@ -1,60 +1,62 @@
-const spans = document.getElementsByClassName('span');
+const addButton = document.getElementById('add');
+const colorPalette = document.getElementById('palette');
 
-const inputRed = document.getElementById('red');
-const inputGreen = document.getElementById('green');
-const inputBlue = document.getElementById('blue');
+function setColor() {
 
-const redText = document.getElementById('red-text');
-const greenText = document.getElementById('green-text');
-const blueText = document.getElementById('blue-text');
+    let red = document.getElementById('red').value;
+    let green = document.getElementById('green').value;
+    let blue = document.getElementById('blue').value;
 
-let red = inputRed.value;
-let green = inputGreen.value;
-let blue = inputBlue.value;
+    const color = `rgb(${red}, ${green}, ${blue})`;
 
-let selectedSpan = ``;
+    addButton.style.backgroundColor = color;
+}
+
+document.getElementById('red').addEventListener('input', setColor);
+document.getElementById('green').addEventListener('input', setColor);
+document.getElementById('blue').addEventListener('input', setColor);
+
+function addColor() {
+
+    let currentColor = addButton.style.backgroundColor;
+
+    let newColor = document.createElement('div');
+    newColor.classList.add('color-span');
+
+    let colorSpan = document.createElement('span');
+
+    newColor.style.backgroundColor = currentColor;
+    newColor.innerHTML = currentColor;
+
+    newColor.appendChild(colorSpan);
+
+    let remove = document.createElement('i');
+    remove.classList.add('bi', 'bi-x-circle', 'remove-icon');
+    remove.addEventListener('click', removeColor);
+
+    newColor.append(remove);
+
+    colorPalette.appendChild(newColor);
+}
+
+function removeColor(e) {
+    let colorToRemove = e.target.parentNode;
+    colorToRemove.remove();
+}
+
+addButton.addEventListener('click', addColor);
 
 let toggle = document.getElementById('toggle');
 let labelToggle = document.getElementById('label-toggle');
 
-redText.textContent = inputRed.value;
-greenText.textContent = inputGreen.value;
-blueText.textContent = inputBlue.value;
-
-for (const span of spans) {
-  span.addEventListener('click', (e) => {
-    e.target.style.backgroundColor = selectedSpan;
-  });
-}
-
-function updateSpanColor (red, green, blue) {
-  selectedSpan = `rgb(${red}, ${green}, ${blue})`;
-}
-
-inputRed.addEventListener('change', (e) => {
-  red = e.target.value;
-  redText.textContent = red;
-  updateSpanColor(red, green, blue);
-});
-
-inputGreen.addEventListener('change', (e) => {
-  green = e.target.value;
-  greenText.textContent = green;
-  updateSpanColor(red, green, blue);
-});
-
-inputBlue.addEventListener('change', (e) => {
-  blue = e.target.value;
-  blueText.textContent = blue;
-  updateSpanColor(red, green, blue);
-});
-
 toggle.addEventListener('change', (e) => {
-  let checked = e.target.checked;
-  document.body.classList.toggle('dark');
-  if (checked == true) {
-    labelToggle.innerHTML = '<i class="bi bi-sun-fill"></i>';
-  } else {
-    labelToggle.innerHTML = '<i class="bi bi-moon-stars-fill">';    
-  }
+    let checked = e.target.checked;
+    document.body.classList.toggle('dark');
+    if (checked == true) {
+        labelToggle.innerHTML = '<i class="bi bi-sun-fill"></i>';
+        labelToggle.style.color = `rgb(235, 235, 235)`;
+    } else {
+        labelToggle.innerHTML = '<i class="bi bi-moon-stars-fill">';    
+        labelToggle.style.color = `rgb(35, 35, 35)`;
+    }
 });

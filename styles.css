@@ -1,68 +1,79 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  font-family:"Red Hat Display", sans-serif;
 }
 
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
-  font-family: 'Red Hat Display', sans-serif;
-  text-transform: uppercase;
-  background-color: rgb(235, 235, 235);
-  transition: all 1.5s ease;
-}
-
-.general-container {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 280px;
-  height: 600px;
-  background-color: rgb(255, 255, 255);
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 5px;
-}
-
-.title {
-  margin: auto;
+  text-align: center;
+  background-color: rgb(235, 235, 235);
 }
 
 .palette-container {
+  width: 50vh;
+  max-width: 300px;
+  min-height: 250px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  width: 200px;
-  height: 270px;
-}
-
-.span {
-  margin: 0 10px 0 10px;
-  width: 180px;
-  height: 40px;
-  cursor: pointer;
-  border: 1px solid rgb(0, 0, 0);
-}
-
-.ranges-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  margin: auto;
+  background-color: white;
+  border-radius: 20px;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .color {
   display: flex;
   flex-direction: column;
+  padding: 5px;
+  margin: 5px;
+  font-size: medium;
+}
+
+.button-container {
+  margin-bottom: 10px;
+}
+
+button {
+  width: 215px;
+  height: 40px;
+  padding: 10px;
+  margin: 10px;
+  border: none;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);;
+  border-radius: 20px;
+  color: white;
+  font-size: medium;
+  text-shadow: 1px 1px rgb(0, 0, 0); 
+}
+
+#palette {
+  min-width: 215px;
+  margin-top: 10px;
+}
+
+.color-span {
+  display: flex;
   justify-content: space-around;
-  align-items: center;
-  width: 200px;
-  margin: 6px 0 6px 0;
-  font-weight: bold;
+  min-width: 215px;
+  height: 40px;
+  padding: 10px;
+  margin: 10px;
+  color: beige;
+  font-size: medium;
+  text-shadow: 1px 1px rgb(0, 0, 0);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);;
+  border-radius: 20px;
+}
+
+i {
+  cursor: pointer;
 }
 
 .toggle-container {
@@ -70,7 +81,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 1.3em;
-  margin: 0px 30px 12px 30px;
+  margin: 0px 30px 24px 30px;
 }
 
 #toggle {
