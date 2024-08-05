@@ -54,7 +54,7 @@ toggle.addEventListener('change', (e) => {
     document.body.classList.toggle('dark');
     if (checked == true) {
         labelToggle.innerHTML = '<i class="bi bi-sun-fill"></i>';
-        labelToggle.style.color = `rgb(235, 235, 235)`;
+        labelToggle.style.color = `rgb(35, 35, 35)`;
     } else {
         labelToggle.innerHTML = '<i class="bi bi-moon-stars-fill">';    
         labelToggle.style.color = `rgb(35, 35, 35)`;

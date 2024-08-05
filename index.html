@@ -14,32 +14,24 @@
 </head>
 <body>
     <main class="main-container">
-        <div class="toggle-container">
-            <label for="toggle" id="label-toggle"><i class="bi bi-moon-stars-fill"></i></label>
-            <input type="checkbox" id="toggle">
-        </div>
-        <div class="palette-container">
-            <div id="palette">
+        <label for="toggle" id="label-toggle"><i class="bi bi-moon-stars-fill"></i></label>
+        <input type="checkbox" id="toggle">
+        <div id="palette">
 
-            </div>
-            <div class="ranges-container">
-                <div class="color">
-                    <p class="color-text">Red</p>
-                    <input id="red" type="range" min="0" max="255" value="255">
-                </div>
-                <div class="color">
-                    <p class="color-text">Green</p>
-                    <input id="green" type="range" min="0" max="255" value="255">
-                </div>
-                <div class="color">
-                    <p class="color-text">Blue</p>
-                    <input id="blue" type="range" min="0" max="255" value="255">
-                </div>
-            </div>
-            <div class="button-container">
-                <button type="submit" id="add">Add Color</button>
-            </div>
         </div>
+        <div class="color">
+            <p class="color-text">Red</p>
+            <input id="red" type="range" min="0" max="255" value="255">
+        </div>
+        <div class="color">
+            <p class="color-text">Green</p>
+            <input id="green" type="range" min="0" max="255" value="255">
+        </div>
+        <div class="color">
+            <p class="color-text">Blue</p>
+            <input id="blue" type="range" min="0" max="255" value="255">
+        </div>
+        <button type="submit" id="add">Add Color</button>
     </main>
     <script src="script.js"></script>
 </body>
