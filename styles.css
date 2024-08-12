@@ -6,28 +6,29 @@
 }
 
 body {
-  min-height: 100vh;
   display: flex;
+  min-height: 100vh;
   justify-content: center;
   align-items: center;
-  text-align: center;
   padding: 40px 0;
   background-color: rgb(235, 235, 235);
   transition: all 1.5s ease;
 }
 
 .main-container {
-  width: 300px;
-  min-height: 250px;
-  background-color: rgb(245, 245, 245);
-  padding: 20px;
-  border-radius: 20px;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
+  width: 300px;
+  min-height: 250px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgb(245, 245, 245);
   box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
 }
+
+/* Light-Dark Mode */
 
 #label-toggle {
   margin-bottom: 10px;
@@ -44,6 +45,8 @@ body {
   transition: all 1.5s ease;
 }
 
+/* Color Palette */
+
 #palette {
   min-width: 215px;
   margin-top: 10px;
@@ -51,29 +54,32 @@ body {
 
 .color-span {
   display: flex;
-  justify-content: space-around;
   min-width: 215px;
   height: 40px;
-  padding: 10px;
   margin: 10px;
-  color: beige;
+  padding: 10px;
+  justify-content: space-around;
   font-size: 0.9em;
   font-weight: bold;
+  border-radius: 20px;
+  color: beige;
   text-shadow: 1px 1px rgb(0, 0, 0);
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);;
-  border-radius: 20px;
 }
 
 i {
   cursor: pointer;
 }
 
+/* RGB Ranges */
+
 .color {
   display: flex;
   flex-direction: column;
-  padding: 5px;
-  margin: 5px;
+  text-align: center;
   width: 215px;
+  margin: 5px;
+  padding: 5px;
   font-weight: bold;
 }
 
@@ -82,17 +88,19 @@ i {
   padding: 2px;
 }
 
+/* Add Color Button */
+
 button {
   width: 215px;
   height: 40px;
+  margin: 20px;
   padding: 10px;
-  margin: 10px;
   border: none;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);;
   border-radius: 20px;
-  color: white;
   font-size: medium;
   font-weight: bold;
+  color: white;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
   text-shadow: 1px 1px rgb(0, 0, 0);
   cursor: pointer; 
 }
