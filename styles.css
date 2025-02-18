@@ -109,19 +109,7 @@ button {
     width: 300px;
   }
 
-  #palette {
-    width: 215px;
-  }
-
-  .color-span {
-    width: 215px;
-  }
-
-  .color {
-    width: 215px;
-  }
-
-  button {
-    width: 215px;
+  #palette, .color-span, .color, button {
+    width: 215px;    
   }
 }
