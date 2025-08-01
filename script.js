@@ -1,8 +1,6 @@
 const addButton = document.getElementById('add');
 const colorPalette = document.getElementById('palette');
 
-addButton.style.backgroundColor = `rgb(255, 255, 255)`;
-
 function setColor() {
 
     let red = document.getElementById('red').value;
@@ -13,6 +11,8 @@ function setColor() {
 
     addButton.style.backgroundColor = color;
 }
+
+setColor();
 
 document.getElementById('red').addEventListener('input', setColor);
 document.getElementById('green').addEventListener('input', setColor);
